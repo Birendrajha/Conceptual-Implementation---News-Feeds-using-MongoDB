@@ -20,7 +20,7 @@ app.use(express.json());
             offset = 0;
       }
       try{
-      const data = await newsArticleModel.find().limit(limit).skip(offset);
+      const data = await newsArticleModel.find().skip(offset).limit(limit);
       res.status(200).send(data);
       }catch(err){
                res.status(400).send(err);
