@@ -12,6 +12,7 @@ app.use(express.json());
  app.get('/newFeeds',async(req,res)=>{
           let limit =Number(req.query.limit);
           let offset = Number(req.query.offset);
+          console.log(offset);
           if(limit==0 || isNaN(limit)){
                 limit = 10;
           }
